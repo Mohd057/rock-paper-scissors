@@ -9,17 +9,17 @@
 <body>
     <script> 
 
-// Computer Choice
+
     function computerPlay() {
         let choice = ["Rock", "Paper", "Scissors"];
         return randomChoice = choice[Math.floor(Math.random() * choice.length)];
     }
-// Player Choice
+
     let playerSelection = prompt("Enter Rock or Paper or Scissors").toLowerCase();
 
     
 
-// Comparison
+
     function playRound(playerSelection, computerPlay) {
         if (computerPlay === "Rock" && playerSelection === "scissors") {
             computerScore++; 
@@ -53,20 +53,20 @@
 
     let userScore = parseInt(0); 
     let computerScore = parseInt(0); 
-    let roundPlayed = parseInt(1)
+    let roundPlayed = parseInt(0)
 
     
    
     
-    function game(playRound) { 
+ 
         for (let i = 1; i <= 5; i++) {
         const computerSelection = computerPlay();
-        console.log(`Computer chose ${computerPlay}\nPlayer chose ${playerSelection}`);
+        console.log(playRound(playerSelection, computerSelection)); 
+        console.log(`Computer chose ${computerSelection}\nPlayer chose ${playerSelection}`);
         console.log("Players' score = " + userScore); 
         console.log("Computers' score = " + computerScore); 
         console.log("Round = " + roundPlayed); 
-        console.log(game(playRound));
-        }
+
     }
 
 
