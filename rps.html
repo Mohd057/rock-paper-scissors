@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+
+// Computer Choice
+    function computerPlay() {
+        let choice = ["Rock", "Paper", "Scissors"];
+        return randomChoice = choice[Math.floor(Math.random() * choice.length)];
+    }
+// Player Choice
+    let playerSelection = prompt("Enter Rock or Paper or Scissors").toLowerCase();
+
+    
+
+// Comparison
+    function playRound(playerSelection, computerPlay) {
+        if (computerPlay === "Rock" && playerSelection === "scissors") {
+            computerScore++; 
+            roundPlayed++; 
+            return "Computer wins";
+        } else if (computerPlay === "Paper" && playerSelection === "rock") {
+            userScore++; 
+            roundPlayed++; 
+            return "Player wins";
+        } else if (computerPlay === "Scissors" && playerSelection === "paper") {
+            computerScore++; 
+            roundPlayed++; 
+            return "Computer wins";
+        } else if (playerSelection === "rock" && computerPlay === "Scissors") {
+            computerScore++; 
+            roundPlayed++; 
+            return "Computer wins";
+        } else if (playerSelection === "paper" && computerPlay === "Rock") {
+            userScore++; 
+            roundPlayed++; 
+            return "Player wins";
+        } else if (playerSelection === "scissors" && computerPlay === "Paper") {
+            userScore++; 
+            roundPlayed++; 
+            return "Player wins";
+        } else {
+            roundPlayed++; 
+            return "Draw";
+        }
+    }
+
+    let userScore = parseInt(0); 
+    let computerScore = parseInt(0); 
+    let roundPlayed = parseInt(1)
+
+    
+   
+    
+    function game(playRound) { 
+        for (let i = 1; i <= 5; i++) {
+        const computerSelection = computerPlay();
+        console.log(`Computer chose ${computerPlay}\nPlayer chose ${playerSelection}`);
+        console.log("Players' score = " + userScore); 
+        console.log("Computers' score = " + computerScore); 
+        console.log("Round = " + roundPlayed); 
+        console.log(game(playRound));
+        }
+    }
+
+
+    </script>
+    
+</body>
+</html>

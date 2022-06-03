@@ -1,1 +1,1 @@
-# rock-paper-scissors
+This is the first part of the rock-paper-scissors project. I will be using Javascript to create the rock-paper-scissors game and implementing what I have learnt to create a functioning game which will allow the user to enter their choice against the computer using 'prompt' and I will also be using for loops to allow the game to be run for 5 rounds. 
